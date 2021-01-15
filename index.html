@@ -1,0 +1,50 @@
+<html>
+    <head><title>Family Book</title></head>
+    <body>
+         <center>
+            <h1 id="456">My Family Book</h1>
+            <img style="height: 450px; width: 360px;" src="https://rachit-programmer.github.io/My_Family_Book/Untitled.png" id="Family">
+            <br>
+            <br>
+            <h2 id="family_text"></h2>
+            <button id="321" onclick="next()">Next Family Member</button>
+        </center>
+         <script>
+            var pics_array=[
+                     "romit bhoyar.jpg",
+                     "Akhil bhoyar.jpg",
+                     "vandana bhoyar.jpg",
+                     "samyak bhoyar.jpg",
+                     ];
+            
+            var text_array=[
+                     "Akhil Bhoyar",
+                     "Vandana Bhoyar",
+                     "Samyak Bhoyar",
+                     "Romit Bhoyar"
+                     ];
+                     var o = 1;
+                     var y = 0;
+
+                 function next() { 
+
+                  if(o == 4) {
+                  o=0;
+                  document.getElementById("456").style.display = "none";
+                  };
+
+                  document.getElementById("Family").src = pics_array[o];
+                  o++;
+
+                  if(y == 4){
+                     y=0; 
+                     }; 
+                  
+                  document.getElementById("family_text").innerHTML=text_array[y]; 
+                  y++;
+
+                };
+
+        </script>
+    </body>
+</html>
